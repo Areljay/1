@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weight and Length Converter</title>
+</head>
+
+<body>
+
+    <h1>Weight Converter kg/lbs</h1>
+
+    <input type="number" id="weight" placeholder="Enter weight">
+
+    <select id="unit">
+        <option value="kg">kg</option>
+        <option value="lbs">lbs</option>
+    </select>   
+
+    <button onclick="convertweight()">Convert weight</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function convertweight() {
+            let weight = Number(document.getElementById("weight").value);
+            let unit = document.getElementById("unit").value;
+
+            if (unit === "kg") {
+                let converted = weight * 2.2;
+                document.getElementById("result").innerText =
+                    "Weight in lbs: " + converted;
+            }
+
+            if (unit === "lbs") {
+                let converted = weight / 2.2;
+                document.getElementById("result").innerText =
+                    "Weight in kg: " + converted;
+            }
+        }
+    </script>
+    <br>
+
+    <h1>Length Converter m/ft</h1>
+
+    <input type="number" id="length" placeholder="Enter length">
+
+    <select id="unitl">
+        <option value="m">m</option>
+        <option value="ft">ft</option>
+    </select>
+
+    <button onclick="convertlength()">Convert Length</button>
+
+    <h2 id="resultl"></h2>
+
+    <script>
+        function convertlength() {
+            let length = Number(document.getElementById("length").value);
+            let unitl = document.getElementById("unitl").value;
+
+            if (unitl === "m") {
+                let convertedl = length * 3.281;
+                document.getElementById("resultl").innerText = "length in ft: " + convertedl;  
+             }
+            if (unitl === "ft") {
+                let convertedl = length / 3.281;
+                document.getElementById("resultl").innerText = "length in m: " + convertedl;  
+             }}
+             </script>
+    <br><br>
+    <h1>Calculate electric usage into cost by month (Bacolod city rate)</h1>
+    <p>calculation on 30 day month</p>
+
+    <input type="number" id="kwhperday" placeholder="kWh usage per day"><span>kWh / day</span>
+
+    <button onclick="calculate()">Calculate</button>
+    <h2 id="resultpeso"></h2>
+   
+    <script>
+        function calculate() {
+                let kwhperday = Number(document.getElementById("kwhperday").value);
+                
+                let resultp = kwhperday * 30 * 14.25;
+                document.getElementById("resultpeso").innerText = resultp + "    Peso / month"
+
+        }
+    </script>
+    <br>
+    <p>For computing each appliance/device</p>
+    <input type="number" id="watt" placeholder="watts of the appliace/device"><span>watts</span>
+    <input type="number" id="avguse" placeholder="avg hours usage per day "><span>hours per day use</span>
+
+    <button onclick="calculate2()">Calculate</button>
+    <h2 id="resultapp"></h2>
+    <p>usage cost for the appliance</p>
+
+    <script>
+        function calculate2() {
+            let watt = Number(document.getElementById("watt").value);
+            let usage = Number(document.getElementById("avguse").value);
+            let kwhpermonthapp = (watt * usage *30) / 1000
+            let resultapp = kwhpermonthapp * 14.25
+            document.getElementById("resultapp").innerText = resultapp + "    Peso / month"
+        }
+
+    </script>
+
+
+
+    
+    
+
+</body>
+<br><br><br><br><br><br><br><br><hr>
+<footer>
+    copyright Rene Jr. Labayen
+</footer>
+</html>
