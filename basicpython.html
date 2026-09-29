@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Unit conversion and electricity computation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity cost calculator and unit converter</title>
+    <style>
+        button {
+            background-color:rgb(116, 114, 221); }
+        body {
+            background-color:gray;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -67,46 +77,49 @@
              }}
              </script>
     <br><br>
-    <h1>Calculate electricity usage into cost per month (Bacolod city rate)</h1>
+
+    <h1>Electricity cost calculator</h1>
     <p>calculation on 30 day month</p>
 
-    <input type="number" id="kwhperday" placeholder="kWh per day"><span>kWh / day</span>
-
+    <input type="number" id="electricityrate" placeholder="Enter"><span>electricity rate (Peso / kWh)</span><br>
+    <input type="number" id="kwhperday" placeholder="Enter"><span>kWh / day</span>
+    <br>
     <button onclick="calculate()">Calculate</button>
     <h2 id="resultpeso"></h2>
    
     <script>
         function calculate() {
                 let kwhperday = Number(document.getElementById("kwhperday").value);
-                
-                let resultp = kwhperday * 30 * 14.25;
+                let rate = Number(document.getElementById("electricityrate").value);
+                let resultp = kwhperday * 30 * rate;
                 document.getElementById("resultpeso").innerText = resultp + "    Peso / month"
 
         }
     </script>
     <br>
     <p>For computing each appliance/device</p>
-    <input type="number" id="watt" placeholder="wattage of the appliace"><span>watts</span>
-    <input type="number" id="avguse" placeholder="avg hours usage per day "><span>hours per day use</span>
-
+    <input type="number" id="electricityrate2" placeholder="Enter"><span>electricity rate (Peso / kWh)</span><br>
+    <input type="number" id="watt" placeholder="Enter"><span>wattage of the appliace</span><br>
+    <input type="number" id="avguse" placeholder="Enter"><span>avg hours per day use</span>
+    <br>
     <button onclick="calculate2()">Calculate</button>
     <h2 id="resultapp"></h2>
     <p>usage cost for the appliance per month</p>
 
     <script>
         function calculate2() {
+            let rate2 = Number(document.getElementById("electricityrate2").value);
             let watt = Number(document.getElementById("watt").value);
             let usage = Number(document.getElementById("avguse").value);
             let kwhpermonthapp = (watt * usage *30) / 1000
-            let resultapp = kwhpermonthapp * 14.25
+            let resultapp = kwhpermonthapp * rate2
             document.getElementById("resultapp").innerText = resultapp + "    Peso / month"
         }
 
     </script>
 
-
 </body>
-<br><br><br><br><br><br><br><br><hr>
+<br><br><br><br><hr>
 <footer>
     copyright Rene Jr. Labayen
 </footer>
