@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electricity cost calculator and unit converter</title>
+    <title>Weight and Length Converter</title>
     <style>
         button {
             background-color:rgb(116, 114, 221); }
         body {
-            background-color:gray;
+            background-color:gray;}
+        .wer {
+            display: flex;
+            gap: 30px;
+
         }
 
     </style>
 </head>
 
 <body>
+<div class="wer">
+    <div class="wer1">
 
     <h1>Weight Converter kg/lbs</h1>
 
@@ -46,9 +52,9 @@
                     "Weight in kg: " + converted;
             }
         }
-    </script>
+    </script></div>
     <br>
-
+    <div class="wer2">
     <h1>Length Converter m/ft</h1>
 
     <input type="number" id="length" placeholder="Enter length">
@@ -75,7 +81,8 @@
                 let convertedl = length / 3.281;
                 document.getElementById("resultl").innerText = "length in m: " + convertedl;  
              }}
-             </script>
+             </script></div>
+    </div>
     <br><br>
 
     <h1>Electricity cost calculator</h1>
@@ -117,6 +124,11 @@
         }
 
     </script>
+
+
+
+    
+    
 
 </body>
 <br><br><br><br><hr>
