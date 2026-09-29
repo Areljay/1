@@ -70,7 +70,7 @@
     <h1>Calculate electric usage into cost by month (Bacolod city rate)</h1>
     <p>calculation on 30 day month</p>
 
-    <input type="number" id="kwhperday" placeholder="kWh usage per day"><span>kWh / day</span>
+    <input type="number" id="kwhperday" placeholder="kWh per day"><span>kWh / day</span>
 
     <button onclick="calculate()">Calculate</button>
     <h2 id="resultpeso"></h2>
@@ -86,12 +86,12 @@
     </script>
     <br>
     <p>For computing each appliance/device</p>
-    <input type="number" id="watt" placeholder="watts of the appliace/device"><span>watts</span>
+    <input type="number" id="watt" placeholder="wattage of the appliace"><span>watts</span>
     <input type="number" id="avguse" placeholder="avg hours usage per day "><span>hours per day use</span>
 
     <button onclick="calculate2()">Calculate</button>
     <h2 id="resultapp"></h2>
-    <p>usage cost for the appliance</p>
+    <p>usage cost for the appliance per month</p>
 
     <script>
         function calculate2() {
