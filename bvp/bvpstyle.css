@@ -1,0 +1,12 @@
+header {
+            text-align: center;
+        }
+body{
+            background-color: aquamarine;
+        }
+main {
+            display: flex;
+            transform: translatex(850px);
+            gap: 10px;
+
+        }
