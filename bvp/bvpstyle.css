@@ -5,12 +5,8 @@ body{
             background-color: aquamarine;
         }
 main {
-            display: flex;
-            transform: translatex(850px);
-            max-width: 100px;
+           
+            
             gap: 10px;
 
-        }
-.home {
-            text-align: center;
         }
