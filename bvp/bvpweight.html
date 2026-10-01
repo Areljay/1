@@ -16,9 +16,70 @@
     </header>
     <br><br><br><br>
     <main>
+        <div>
+            <h3>Item 1</h3>
+            <input type="number" id="price1" placeholder="Enter price">
+            <input type="number" id="weight1" placeholder="Enter weight">
+            <select id="unit1">
+                <option value="g">g</option>
+                <option value="kg">kg</option>
+            </select>
+            <h4 id="result1"></h4>      
+        </div>
+
+            <div>
+            <h3>Item 2</h3>
+            <input type="number" id="price2" placeholder="Enter price">
+            <input type="number" id="weight2" placeholder="Enter weight">
+            <select id="unit2">
+                <option value="g">g</option>
+                <option value="kg">kg</option>
+            </select>
+            <h4 id="result2"></h4>
+           
+        </div>
+         <p>Both items will be computed to their cost per 100g for quick comparation</p>
+        <button onclick="compare()">Compare</button>
+         <script>
+                function compare() {
+                    let price1 = Number(document.getElementById("price1").value);
+                    let weight1 = Number(document.getElementById("weight1").value);
+                    let unit1 = document.getElementById("unit1").value;
+                    
+                        if (unit1 === "g" ) {
+                            let price1per100g = (price1 / weight1) * 100;
+                            document.getElementById("result1").innerText =
+                             price1per100g.toFixed(2) + " per 100g";
+                            }
+                        if (unit1 ==="kg") {
+                            let price1perkg = (price1 / weight1)/10;
+                            document.getElementById("result1").innerText =
+                             price1perkg.toFixed(2) + " per 100g";
+                        }
+                    let price2 = Number(document.getElementById("price2").value);
+                    let weight2 = Number(document.getElementById("weight2").value);
+                    let unit2 = document.getElementById("unit2").value;
+                        if (unit2 === "g" ) {
+                            let price2per100g = (price2 / weight2) * 100;
+                            document.getElementById("result2").innerText =
+                             price2per100g.toFixed(2) + " per 100g";
+                            }
+                        if (unit2 ==="kg") {
+                            let price2perkg = (price2 / weight2)/10;
+                            document.getElementById("result2").innerText =
+                             price2perkg.toFixed(2) + " per 100g";
+                        }
+
+                }
+            </script>
+            
+          </main>
+        <br><br><br>
+
+        <div class=home><a href="bestvaluepicker.html" style="display: block;">Home</a></div>
        
 
-    </main>
+  
 </body>
  <br><br><br><br>
 <footer>
