@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Value Check</title>
+    <link rel="stylesheet" href="bvpstyle.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Best value checker</h1>
+    <p>Quickly check which item has the better value base on its price per volume or volume</p>
+    </header>
+    <br><br><br><br>
+    <main>
+        <div>
+            <h3>Item 1</h3>
+            <input type="number" id="price1" placeholder="Enter price">
+            <input type="number" id="volume1" placeholder="Enter volume">
+            <select id="unit1">
+                <option value="ml">ml</option>
+                <option value="L">L</option>
+            </select>
+            <h4 id="result1"></h4>      
+        </div>
+
+            <div>
+            <h3>Item 2</h3>
+            <input type="number" id="price2" placeholder="Enter price">
+            <input type="number" id="volume2" placeholder="Enter volume">
+            <select id="unit2">
+                <option value="ml">ml</option>
+                <option value="L">L</option>
+            </select>
+            <h4 id="result2"></h4>
+           
+        </div>
+         <p>Both items will be computed to their cost per 500ml</p>
+        <button onclick="compare()">Compare</button>
+         <script>
+                function compare() {
+                    let price1 = Number(document.getElementById("price1").value);
+                    let volume1 = Number(document.getElementById("volume1").value);
+                    let unit1 = document.getElementById("unit1").value;
+                    
+                        if (unit1 === "ml" ) {
+                            let price1perml = (price1 / volume1) * 500;
+                            document.getElementById("result1").innerText =
+                             price1perml.toFixed(2) + " per 500ml";
+                            }
+                        if (unit1 ==="L") {
+                            let price1perL = (price1 / volume1)/2;
+                            document.getElementById("result1").innerText =
+                             price1perL.toFixed(2) + " per 500ml";
+                        }
+                    let price2 = Number(document.getElementById("price2").value);
+                    let volume2 = Number(document.getElementById("volume2").value);
+                    let unit2 = document.getElementById("unit2").value;
+                        if (unit2 === "ml" ) {
+                            let price2perml = (price2 / volume2) * 500;
+                            document.getElementById("result2").innerText =
+                             price2perml.toFixed(2) + " per 500ml";
+                            }
+                        if (unit2 ==="L") {
+                            let price2perL = (price2 / volume2)/2;
+                            document.getElementById("result2").innerText =
+                             price2perL.toFixed(2) + " per 500ml";
+                        }
+
+                }
+            </script>
+            
+          </main>
+        <br><br><br>
+
+        <div class=home><a href="bestvaluepicker.html" style="display: block;">Home</a></div>
+       
+
+  
+</body>
+ <br><br><br><br>
+<footer>
+    copyright 2026 Rene Jr. Labayen
+</footer>
+</html>
