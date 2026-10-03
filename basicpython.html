@@ -49,13 +49,13 @@
             if (unit === "kg") {
                 let converted = weight * 2.2;
                 document.getElementById("result").innerText =
-                    "Weight in lbs: " + converted;
+                    "Weight in lbs: " + converted.toFixed(2);
             }
 
             if (unit === "lbs") {
                 let converted = weight / 2.2;
                 document.getElementById("result").innerText =
-                    "Weight in kg: " + converted;
+                    "Weight in kg: " + converted.toFixed(2);
             }
         }
     </script></div>
@@ -81,11 +81,11 @@
 
             if (unitl === "m") {
                 let convertedl = length * 3.281;
-                document.getElementById("resultl").innerText = "length in ft: " + convertedl;  
+                document.getElementById("resultl").innerText = "length in ft: " + convertedl.toFixed(2);  
              }
             if (unitl === "ft") {
                 let convertedl = length / 3.281;
-                document.getElementById("resultl").innerText = "length in m: " + convertedl;  
+                document.getElementById("resultl").innerText = "length in m: " + convertedl.toFixed(2);  
              }}
              </script></div>
     </div>
@@ -105,7 +105,7 @@
                 let kwhperday = Number(document.getElementById("kwhperday").value);
                 let rate = Number(document.getElementById("electricityrate").value);
                 let resultp = kwhperday * 30 * rate;
-                document.getElementById("resultpeso").innerText = resultp + "    Peso / month"
+                document.getElementById("resultpeso").innerText = resultp.toFixed(2) + "    Peso / month"
 
         }
     </script>
@@ -126,7 +126,7 @@
             let usage = Number(document.getElementById("avguse").value);
             let kwhpermonthapp = (watt * usage *30) / 1000
             let resultapp = kwhpermonthapp * rate2
-            document.getElementById("resultapp").innerText = resultapp + "    Peso / month"
+            document.getElementById("resultapp").innerText = resultapp.toFixed(2) + "    Peso / month"
         }
 
     </script>
