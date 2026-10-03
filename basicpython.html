@@ -17,10 +17,14 @@
 <body>
     <nav><a href="https://areljay.github.io./1/webprojects.html">Other webpage projects</a></nav>
     <br><br>
+    <main>
+    <h1>Engineering Applications</h1>
+    <p>Developed an interactive web application that computes estimated electricity cost and converts unit for weight and length. Implemented calculations using appliance power rating, usage duration, and electricity rate.</p>
+    <br><br>
 <div class="wer">
     <div class="wer1">
 
-    <h1>Weight Converter kg/lbs</h1>
+    <h3>Weight Converter kg/lbs</h3>
 
     <input type="number" id="weight" placeholder="Enter weight">
 
@@ -31,7 +35,7 @@
 
     <button onclick="convertweight()">Convert weight</button>
 
-    <h2 id="result"></h2>
+    <h4 id="result"></h4>
 
     <script>
         function convertweight() {
@@ -53,7 +57,7 @@
     </script></div>
     <br>
     <div class="wer2">
-    <h1>Length Converter m/ft</h1>
+    <h3>Length Converter m/ft</h3>
 
     <input type="number" id="length" placeholder="Enter length">
 
@@ -64,7 +68,7 @@
 
     <button onclick="convertlength()">Convert Length</button>
 
-    <h2 id="resultl"></h2>
+    <h4 id="resultl"></h4>
 
     <script>
         function convertlength() {
@@ -83,14 +87,14 @@
     </div>
     <br><br>
 
-    <h1>Electricity cost calculator</h1>
+    <h3>Electricity cost calculator</h3>
     <p>calculation on 30 day month</p>
 
     <input type="number" id="electricityrate" placeholder="Enter"><span>electricity rate (Peso / kWh)</span><br>
     <input type="number" id="kwhperday" placeholder="Enter"><span>kWh / day</span>
     <br>
     <button onclick="calculate()">Calculate</button>
-    <h2 id="resultpeso"></h2>
+    <h4 id="resultpeso"></h4>
    
     <script>
         function calculate() {
@@ -108,7 +112,7 @@
     <input type="number" id="avguse" placeholder="Enter"><span>avg hours per day use</span>
     <br>
     <button onclick="calculate2()">Calculate</button>
-    <h2 id="resultapp"></h2>
+    <h4 id="resultapp"></h4>
     <p>usage cost for the appliance per month</p>
 
     <script>
@@ -122,7 +126,7 @@
         }
 
     </script>
-
+</main>
 
 
     
